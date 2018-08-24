@@ -72,7 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>..\Sample;..\GLFW\include;$(IncludePath)</IncludePath>
+    <IncludePath>..\;..\Sample;..\GLFW\include;$(IncludePath)</IncludePath>
     <LibraryPath>..\GLFW\lib\Debug;$(LibraryPath)</LibraryPath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
   </PropertyGroup>
@@ -98,7 +98,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CRT_SECURE_NO_WARNINGS;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -166,13 +166,16 @@
     <ClCompile Include="..\Sample\ExemplarBase.cpp" />
     <ClCompile Include="..\Sample\ExemplarSelect.cpp" />
     <ClCompile Include="..\Sample\Transform_feedback\Transform_feedback_Demo.cpp" />
+    <ClCompile Include="..\Sample\vutils.cpp" />
     <ClCompile Include="OGL-Sample.cpp" />
+    <ClCompile Include="stb_image.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\GLFW\include\glad\glad.h" />
     <ClInclude Include="..\Sample\ExemplarBase.h" />
     <ClInclude Include="..\Sample\ExemplarSelect.h" />
     <ClInclude Include="..\Sample\Transform_feedback\Transform_feedback_Demo.h" />
+    <ClInclude Include="..\Sample\vutils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

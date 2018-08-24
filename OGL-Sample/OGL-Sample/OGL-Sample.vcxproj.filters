@@ -34,6 +34,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="..\Sample\ExemplarSelect.cpp">
+      <Filter>Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sample\vutils.cpp">
+      <Filter>Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="stb_image.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -48,6 +54,9 @@
       <Filter>Sample</Filter>
     </ClInclude>
     <ClInclude Include="..\Sample\ExemplarSelect.h">
+      <Filter>Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sample\vutils.h">
       <Filter>Sample</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,4 +1,6 @@
 #pragma once
+#include <glad/glad.h>
+#include "vutils.h"
 class ExemplarBase
 {
 public:
@@ -13,6 +15,8 @@ public:
 	virtual void Update(double delta) = 0;
 
 	virtual void Render(int width, int height)= 0;
+
+	virtual void Destory() = 0;
 
 	virtual void KeyCallback(int key, int scancode, int action, int mods);
 	

@@ -2,6 +2,24 @@
 #include "../ExemplarBase.h"
 class FeedbackDemo:public ExemplarBase
 {
+	enum BufferEnum
+	{
+		VertexArray,
+		TransformFeedback,
+		BufferEnumCount
+	};
+	enum RenderBufferEnum
+	{
+		ColorBuffer,
+		DepthBuffer,
+		RenderBufferCount
+	};
+	enum ProgramEnum
+	{
+		RenderProgram,
+		TransformProgram,
+		ProgramEnumCount
+	};
 public:
 	explicit FeedbackDemo();
 	
@@ -13,7 +31,23 @@ public:
 
 	virtual void Render(int width, int height) override;
 
-private:
+	virtual void Destory() override;
 
+	virtual void MouseButtonCallback(int button, int action, int mods) override;
+
+private:
+	GLuint _buffer[BufferEnumCount] ;
+	
+	GLuint _render_buffer[RenderBufferCount];
+
+	GLuint _frame_buffer_object = 0;
+
+	GLuint _program[ProgramEnumCount];
+
+	int _max_particle_count = 1000;
+
+	int _last_width = 0;
+
+	int _last_height = 0;
 };
 
