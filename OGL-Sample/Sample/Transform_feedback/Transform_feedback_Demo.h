@@ -1,23 +1,27 @@
 #pragma once
 #include "../ExemplarBase.h"
+
+
 class FeedbackDemo:public ExemplarBase
 {
 	enum BufferEnum
 	{
-		VertexArray,
-		TransformFeedback,
+		BE_VertexArray,
+		BE_Transform,
+		BE_Feedback,
+		BE_Unifrom,
 		BufferEnumCount
 	};
 	enum RenderBufferEnum
 	{
-		ColorBuffer,
-		DepthBuffer,
+		RBE_ColorBuffer,
+		RBE_DepthBuffer,
 		RenderBufferCount
 	};
 	enum ProgramEnum
 	{
-		RenderProgram,
-		TransformProgram,
+		PE_Render,
+		PE_Transform,
 		ProgramEnumCount
 	};
 public:
@@ -37,14 +41,15 @@ public:
 
 private:
 	GLuint _buffer[BufferEnumCount] ;
-	
+
+#ifdef HDR_BUFFER
 	GLuint _render_buffer[RenderBufferCount];
 
 	GLuint _frame_buffer_object = 0;
-
+#endif 
 	GLuint _program[ProgramEnumCount];
 
-	int _max_particle_count = 1000;
+	int _max_particle_count = 100;
 
 	int _last_width = 0;
 

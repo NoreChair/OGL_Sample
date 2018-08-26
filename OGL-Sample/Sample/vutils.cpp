@@ -1,6 +1,7 @@
 #include "vutils.h"
 #include <stb/stb_image.h>
 #include <fstream>
+#include <glm/glm.hpp>
 void vglAttachShaderSource(GLuint prog, GLenum type, const char * source)
 {
 	GLuint sh;
@@ -75,7 +76,7 @@ void vglCreateProgramFromFile(GLuint & program, const char * vert_path, const ch
 	{
 		char log[1024];
 		glGetProgramInfoLog(prog, sizeof(log), nullptr, log);
-		sprintf(log, "Program link Error %s ",log);
+		sprintf(log, "Program link Error %s with %s,%s",log, vert_path,frag_path);
 		Log_Error(log);
 		glDeleteProgram(prog);
 		program = 0;
@@ -97,3 +98,11 @@ unsigned char * vglLoadPictureDataByte(const char * path, int * comp, int * widt
 	pciture_data = stbi_load(path, width, height, comp, 0);
 	return pciture_data;
 }
+float RandomGen()
+{
+
+	float v = g_random_dis(g_gen) * 0.01f;
+	return glm::clamp(v, -1.0f, 1.0f)*0.5f+0.5f;
+}
+
+
