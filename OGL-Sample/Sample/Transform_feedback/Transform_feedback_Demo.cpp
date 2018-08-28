@@ -1,4 +1,4 @@
-#include "Transform_feedback_Demo.h"
+﻿#include "Transform_feedback_Demo.h"
 #include <stdio.h>
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
@@ -72,6 +72,7 @@ void FeedbackDemo::Update(double delta)
 
 	if (call_count)
 	{
+		glEnable(GL_RASTERIZER_DISCARD);
 		glUseProgram(_program[PE_Transform]);
 		
 		glBindBuffer(GL_ARRAY_BUFFER, _buffer[BE_Transform]);
@@ -91,9 +92,10 @@ void FeedbackDemo::Update(double delta)
 
 		glDisableVertexAttribArray(0);
 		glDisableVertexAttribArray(1);
-
+		glDisable(GL_RASTERIZER_DISCARD);
 #if 1
 		{
+			/// 这里可以拆分buffer 设置GL_SEPARATE_ATTRIBS 填充数据 这样可以避免map做拷贝 不过一个demo我就不弄了
 			glBindBuffer(GL_TRANSFORM_FEEDBACK_BUFFER, _buffer[BE_Feedback]);
 			float* pointer = (float*)glMapBuffer(GL_TRANSFORM_FEEDBACK_BUFFER, GL_READ_ONLY);
 			glBindBuffer(GL_ARRAY_BUFFER, _buffer[BE_VertexArray]);
