@@ -30,9 +30,6 @@
     <ClCompile Include="..\Sample\ExemplarBase.cpp">
       <Filter>Sample</Filter>
     </ClCompile>
-    <ClCompile Include="..\Sample\Transform_feedback\Transform_feedback_Demo.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="..\Sample\ExemplarSelect.cpp">
       <Filter>Sample</Filter>
     </ClCompile>
@@ -41,6 +38,9 @@
     </ClCompile>
     <ClCompile Include="stb_image.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sample\Transform_feedback\Transform_feedback_Demo.cpp">
+      <Filter>Sample\Transform_feedback</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
