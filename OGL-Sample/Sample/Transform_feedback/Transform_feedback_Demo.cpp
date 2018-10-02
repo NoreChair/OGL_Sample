@@ -190,9 +190,6 @@ void FeedbackDemo::Destory()
 	glDeleteProgram(_program[PE_Transform]);
 }
 
-void FeedbackDemo::MouseButtonCallback(int button, int action, int mods)
-{
-	printf("FeedbackDemo mouse button %d \n",button);
-}
+
 
 

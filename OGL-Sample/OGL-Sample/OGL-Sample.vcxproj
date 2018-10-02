@@ -163,6 +163,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\GLFW\include\glad.c" />
+    <ClCompile Include="..\Sample\CSS\ShadowMap.cpp" />
     <ClCompile Include="..\Sample\ExemplarBase.cpp" />
     <ClCompile Include="..\Sample\ExemplarSelect.cpp" />
     <ClCompile Include="..\Sample\Transform_feedback\Transform_feedback_Demo.cpp" />
@@ -172,6 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\GLFW\include\glad\glad.h" />
+    <ClInclude Include="..\Sample\CSS\ShadowMap.h" />
     <ClInclude Include="..\Sample\ExemplarBase.h" />
     <ClInclude Include="..\Sample\ExemplarSelect.h" />
     <ClInclude Include="..\Sample\Transform_feedback\Transform_feedback_Demo.h" />

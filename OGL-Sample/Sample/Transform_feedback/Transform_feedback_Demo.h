@@ -37,7 +37,6 @@ public:
 
 	virtual void Destory() override;
 
-	virtual void MouseButtonCallback(int button, int action, int mods) override;
 
 private:
 	GLuint _buffer[BufferEnumCount] ;

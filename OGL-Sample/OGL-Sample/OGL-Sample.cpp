@@ -80,7 +80,7 @@ int main()
 	const unsigned char* gl_version = glGetString(GL_VERSION);
 	printf("GL Version %s \n", gl_version);
 
-	ExemplarBase*  cur_demo = CreateExemplar(ExemplarEnum::TransformFeedback);
+	ExemplarBase*  cur_demo = CreateExemplar(ExemplarEnum::Transform_Feedback);
 	if (!cur_demo)
 	{
 		glfwTerminate();

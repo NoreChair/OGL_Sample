@@ -19,6 +19,9 @@
     <Filter Include="Sample\Transform_feedback">
       <UniqueIdentifier>{5ef260d0-24e7-4fc1-af09-4c11a2ed5019}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sample\CSS">
+      <UniqueIdentifier>{1a4e88c7-130c-4d71-a893-f54eab1e6465}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OGL-Sample.cpp">
@@ -30,9 +33,6 @@
     <ClCompile Include="..\Sample\ExemplarBase.cpp">
       <Filter>Sample</Filter>
     </ClCompile>
-    <ClCompile Include="..\Sample\Transform_feedback\Transform_feedback_Demo.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="..\Sample\ExemplarSelect.cpp">
       <Filter>Sample</Filter>
     </ClCompile>
@@ -41,6 +41,12 @@
     </ClCompile>
     <ClCompile Include="stb_image.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sample\CSS\ShadowMap.cpp">
+      <Filter>Sample\CSS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sample\Transform_feedback\Transform_feedback_Demo.cpp">
+      <Filter>Sample\Transform_feedback</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +64,9 @@
     </ClInclude>
     <ClInclude Include="..\Sample\vutils.h">
       <Filter>Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sample\CSS\ShadowMap.h">
+      <Filter>Sample\CSS</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

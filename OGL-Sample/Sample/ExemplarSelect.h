@@ -1,8 +1,9 @@
-#pragma once
+﻿#pragma once
 #include "ExemplarBase.h"
 enum ExemplarEnum
 {
-	TransformFeedback=1,
+	Transform_Feedback=1,
+	Cascaded_Shadow_Maps,
 	ExemplarEnumCount
 };
 
